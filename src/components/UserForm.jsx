@@ -22,6 +22,14 @@ export default function UserForm() {
     setError(null);
 
     try {
+      // Obtendo a URL atual do site (funcionará tanto em desenvolvimento quanto em produção)
+      const siteUrl = window.location.origin;
+
+      // Obtendo o URL completo para redirecionamento
+      const redirectUrl = `${siteUrl}/qrcode?nome=${encodeURIComponent(
+        formData.nome
+      )}`;
+
       // Contornando problemas de CORS usando o método tradicional do FormSubmit (sem fetch)
       const form = e.target;
 
@@ -37,12 +45,7 @@ export default function UserForm() {
 
       // Campos do FormSubmit
       createHiddenInput("_subject", `Novo cadastro de ${formData.nome}`);
-      createHiddenInput(
-        "_next",
-        `${window.location.origin}/qrcode?nome=${encodeURIComponent(
-          formData.nome
-        )}`
-      );
+      createHiddenInput("_next", redirectUrl);
       createHiddenInput("_captcha", "false");
       createHiddenInput("_template", "table");
       const honey = createHiddenInput("_honey", "");
@@ -52,10 +55,9 @@ export default function UserForm() {
       sessionStorage.setItem("userName", formData.nome);
 
       // Enviar o formulário diretamente (método tradicional, sem fetch)
+      console.log("Enviando formulário para:", form.action);
+      console.log("Redirecionando para:", redirectUrl);
       form.submit();
-
-      // Não precisamos fazer mais nada após o submit, o navegador vai para a próxima página
-      // definida no _next do FormSubmit
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
       setError(`Ocorreu um erro ao enviar o formulário: ${error.message}`);
