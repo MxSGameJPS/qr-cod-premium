@@ -1,0 +1,48 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo preto -->
+  <rect width="32" height="32" rx="6" fill="black"/>
+  
+  <!-- Padrão QR em dourado -->
+  <g fill="#FFAB00">
+    <!-- Canto Superior Esquerdo -->
+    <rect x="6" y="6" width="2" height="2" />
+    <rect x="8" y="6" width="2" height="2" />
+    <rect x="10" y="6" width="2" height="2" />
+    <rect x="6" y="8" width="2" height="2" />
+    <rect x="10" y="8" width="2" height="2" />
+    <rect x="6" y="10" width="2" height="2" />
+    <rect x="8" y="10" width="2" height="2" />
+    <rect x="10" y="10" width="2" height="2" />
+    
+    <!-- Canto Superior Direito -->
+    <rect x="20" y="6" width="2" height="2" />
+    <rect x="22" y="6" width="2" height="2" />
+    <rect x="24" y="6" width="2" height="2" />
+    <rect x="20" y="8" width="2" height="2" />
+    <rect x="24" y="8" width="2" height="2" />
+    <rect x="20" y="10" width="2" height="2" />
+    <rect x="22" y="10" width="2" height="2" />
+    <rect x="24" y="10" width="2" height="2" />
+    
+    <!-- Canto Inferior Esquerdo -->
+    <rect x="6" y="20" width="2" height="2" />
+    <rect x="8" y="20" width="2" height="2" />
+    <rect x="10" y="20" width="2" height="2" />
+    <rect x="6" y="22" width="2" height="2" />
+    <rect x="10" y="22" width="2" height="2" />
+    <rect x="6" y="24" width="2" height="2" />
+    <rect x="8" y="24" width="2" height="2" />
+    <rect x="10" y="24" width="2" height="2" />
+    
+    <!-- Elementos centrais -->
+    <rect x="14" y="14" width="4" height="4" />
+    <rect x="14" y="10" width="2" height="2" />
+    <rect x="16" y="12" width="2" height="2" />
+    <rect x="14" y="20" width="2" height="2" />
+    <rect x="18" y="16" width="2" height="2" />
+    <rect x="20" y="14" width="2" height="2" />
+  </g>
+  
+  <!-- Borda dourada sutil -->
+  <rect x="1" y="1" width="30" height="30" rx="5" stroke="#FFAB00" stroke-opacity="0.5" stroke-width="1" fill="none"/>
+</svg> 
